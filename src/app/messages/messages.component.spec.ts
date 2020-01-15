@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { testModuleConfig } from '../test-ng-module-config';
+
 import { MessagesComponent } from './messages.component';
 
 describe('MessagesComponent', () => {
@@ -7,9 +9,7 @@ describe('MessagesComponent', () => {
   let fixture: ComponentFixture<MessagesComponent>;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ MessagesComponent ]
-    })
+    TestBed.configureTestingModule(testModuleConfig)
     .compileComponents();
   }));
 

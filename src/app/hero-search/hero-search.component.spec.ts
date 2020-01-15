@@ -1,13 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from '../app-routing.module';
+import { testModuleConfig } from '../test-ng-module-config';
 
 import { HeroSearchComponent } from './hero-search.component';
-import { DashboardComponent } from '../dashboard/dashboard.component';
-import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
-import { HeroesComponent } from '../heroes/heroes.component';
 
 
 describe('HeroSearchComponent', () => {
@@ -15,19 +10,7 @@ describe('HeroSearchComponent', () => {
   let fixture: ComponentFixture<HeroSearchComponent>;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        HeroSearchComponent,
-        DashboardComponent,
-        HeroDetailComponent,
-        HeroesComponent
-      ],
-      imports: [
-        AppRoutingModule,
-        FormsModule,
-        HttpClientModule
-      ]
-    })
+    TestBed.configureTestingModule(testModuleConfig)
     .compileComponents();
   }));
 

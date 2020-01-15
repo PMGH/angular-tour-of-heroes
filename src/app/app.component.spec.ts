@@ -1,19 +1,13 @@
 import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+
+import { testModuleConfig } from './test-ng-module-config';
+
 import { AppComponent } from './app.component';
-import { MessagesComponent } from './messages/messages.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent,
-        MessagesComponent
-      ],
-    }).compileComponents();
+    TestBed.configureTestingModule(testModuleConfig)
+    .compileComponents();
   }));
 
   it('should create the app', () => {
